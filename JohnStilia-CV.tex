@@ -13,8 +13,8 @@
 % CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
 %
 % Important note:
-% This template requires the moderncv.cls and .sty files to be in the same 
-% directory as this .tex file. These files provide the resume style and themes 
+% This template requires the moderncv.cls and .sty files to be in the same
+% directory as this .tex file. These files provide the resume style and themes
 % used for structuring the document.
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -71,6 +71,7 @@
 \cvitem{Version Control - CI/CD}{\textsc FluxCD, Github/Actions, GitLab/CI/Security, Helm, Ansible}
 \cvitem{DevOps and Security}{\textsc AWS Well-Architect, Snyk, Trivy, Checkov, Bridgecrew, GitLab Security }
 \cvitem{Monitoring and Observability}{\textsc Grafana. Prometheus, Alert Manager, Loki, DataDog}
+\cvitem{Containerization}{\textsc Docker, Kubernetes, K3S, K8S on BareMetal, Terraform, Ansible, Packer, Prometheus, Grafana ( Whole stack)}
 
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE SECTION
@@ -78,14 +79,19 @@
 
 \section{Work Experience}
 
-\cventry{05/’24 - Present }{Senior DevOps Engineer}{\textsc{Bohemia Interactive Simulations}}{London}{}
+\cventry{05/’24 - Present}{Senior DevOps Engineer / DevOps Lead}{\textsc{Bohemia Interactive Simulations}}{London}{}
 {
-	Enhancing/Maintaining Ansible Playbooks for Infrastructure as Code.\\
-	Maintain/Implement Monitoring with Prometheus and Grafana.\\
-	Developing CI/CD Pipelines with GitLab CI/CD.\\
-	Migrate services from VM to K8S.\\
-	Container Security with Trivy and GitLab Security Suite.\\
-	Delivering Training Workshops on Kubernetes, Terraform, and CI/CD.\\
+	Leading the design and maintenance of Ansible Playbooks to enforce Infrastructure as Code standards.\\
+	Overseeing deployment and lifecycle management of AWX (Ansible Tower) for team-wide CI/CD workflows.\\
+	Architecting and reviewing reusable Terraform modules to ensure consistency across environments.\\
+	Driving CI/CD pipeline strategy and implementation using GitLab CI/CD across multiple projects.\\
+	Leading adoption and integration of GitLab Security Suite for vulnerability scanning and compliance.\\
+	Defining and maintaining observability stack with Prometheus, Grafana, Loki, Promtail, Node Exporter, and Pushgateway.\\
+	Establishing best practices for container security using Trivy and automated GitLab pipelines.\\
+	Managing Kubernetes infrastructure on both Tanzu and AWX, including scaling, security, and governance.\\
+	Migrating legacy VM-based services to Kubernetes, ensuring minimal downtime and optimized performance.\\
+	Championing DevOps best practices through internal workshops on Kubernetes, Terraform, and GitLab CI/CD.\\
+	Mentoring junior engineers and shaping DevOps culture across the engineering department.\\
 }
 
 
@@ -166,10 +172,13 @@
 %%% ------------------------------------------------------------
 \section*{Project Experience}
 
-\cvitem{VSCode Extension - PastePortal}{Imagine PasteBin, but for Developers, VSCode extension that allow to share code snippets in one key-combo. This helped me to collaborate better}
-\cvitem {VSCode Extension - Yolo Commit}{I wrote a VSCode extension in JavaScript that will create a random commit message and commit all files and push. Sometimes you just need to push code in a branch, then squash}
-\cvitem {VSCode Extension - LazyLogs}{This is a VSCode extension, written in JavaScript, It will detect the language and add a relevant print statement of the highlighted variable. Great for debugging }
-\cvitem{Local K8S with CloudFlare Tunneling}{AWS is too expensive, so I run my own HomeLab, Using K8S on BareMetal and CloudFlare Tunneling to avoid opening ports. Deployed with Github and Flux, templating with Help}
+
+\cvitem{VSCode Extension – PastePortal}{Think Pastebin but for developers—this VSCode extension lets you share code snippets instantly with a key combo. Made collaboration way smoother.}
+\cvitem{VSCode Extension – Yolo Commit}{Built a fun and useful VSCode extension in JavaScript that creates random commit messages, commits all changes, and pushes them. Great for temp branches before squashing.}
+\cvitem{VSCode Extension – LazyLogs}{Wrote this in JavaScript to speed up debugging—detects language and injects smart print/debug statements for selected variables.}
+\cvitem{Local K8S + Cloudflare Tunnels}{Running bare-metal Kubernetes at home to save on AWS costs. Using GitHub + Flux for GitOps, templated with Helm, and securely exposed via Cloudflare Tunnels.}
+\cvitem{Mobile App – NutriScan}{Currently developing a mobile app that uses AI to scan and calculate nutritional values of food. Built with React Native, Node.js backend, and local AI models.}
+\cvitem{Book – *The Tao of Ansible*}{Writing a practical, modern guide to mastering Ansible. Focused on real-world patterns, clarity, and purposeful automation.}
 
 
 % %----------------------------------------------------------------------------------------
@@ -210,7 +219,7 @@
 % \section{Achievements}
 
 % \cvitem{2008}{Designed Charger For Electronic Ticketing Machine For KSRTC}
-% \cvitem{2012}{Google scholar citation : \href{http://scholar.google.co.in/citations?user=hcny9sIAAAAJ}{Link}} 
+% \cvitem{2012}{Google scholar citation : \href{http://scholar.google.co.in/citations?user=hcny9sIAAAAJ}{Link}}
 % \cvitem{2013}{Reviewer of 2012  International Journal of Research in Engineering and Science}
 % \cvitem{2015}{\emph{Patent} filed in India for Programmable Power Socket - 3019/CHE/2015}
 
@@ -234,7 +243,7 @@
 %%\begin{itemize}
 %% \item Dr. Padmanabha, Principal, T John Institute Of Technology,Bangalore, India.
 %%\item S S Prasad, C E O Globals Technologies, Jayanagar, Bangalore, India.
-%%\item Dr. Ram Raj Urs, Chairman Lions Club, Bangalore Head Librarian and Course %%Director,Rajiv Gandhi University of Health Sciences, Karnataka, India. 
+%%\item Dr. Ram Raj Urs, Chairman Lions Club, Bangalore Head Librarian and Course %%Director,Rajiv Gandhi University of Health Sciences, Karnataka, India.
 
 
 %%\end{itemize}
@@ -246,7 +255,7 @@
 % To remove the cover letter, comment out this entire block
 % \cventry{} {}{\textsc{ COVER Letter}}{}{}{}
 
-% 
+%
 %{ - } % Letter recipient
 % \date{\today} % Letter date
 % \opening{Dear Sir or Madam,} % Opening greeting
@@ -262,7 +271,7 @@
 %----------------------------------------------------------------------------------------
 
 
-% add date to the end of the page at the verry bottom like hte page number 
+% add date to the end of the page at the verry bottom like hte page number
 
 
 
