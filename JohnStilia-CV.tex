@@ -5,10 +5,8 @@
 %% PROFILE SIDE BAR %%
 %%%%%%%%%%%%%%%%%%%%%%
 % personal info
-% \profilepic{alice.jpeg}          % path of profile pic
 \cvname{John Stilia}                   % your name
-\cvjobtitle{DevSecOps Lead Engineer}          % your actual job position
-% \cvdate{26 November 1865}        % date of birth
+\cvjobtitle{DevSecOps Engineer}          % your actual job position
 \cvaddress{London, United Kingdom}       % address
 \cvnumberphone{+44 07572785067 }   % telephone number
 \cvmail{stilia.johny@gmail.com}    %e-mail
@@ -17,12 +15,14 @@
 \vspace{5cm}
 
 \aboutme{
-  I am a diverse DevSecOps Engineer. with a proven track record of building highly available, reliable and secure systems. I have leadership experience leading a DevOps team, building and delivering projects for financial and retail clients. Currently, I lead a team of engineers who develop and maintain the infrastructure of PlanetV, an advertising platform that serves all major broadcasters and advertisers.
+  I am a diverse DevSecOps Engineer. with a proven track record of building highly available, reliable and secure systems. I have leadership experience leading a DevOps team, building and delivering projects for financial and retail clients. Currently, enhance and maintain the infrastructure and security posture for Century, an e-Learning platform for schools.
 } % About me section
 
 
 
-\skillstext{{AWS},{RDS},{SAM},{Serverless},{Python},{Terraform},{Ansible},{Docker},{Kubernetes},{Git},{Linux},{Github Actions}, {C++}, {Cross-Funtional Teams},{Mentoring}, {Management}, {Communication}, {Problem Solving}, {Teamwork}, {Leadership}, {Agile}, {Scrum}, {Kanban}, {DevOps}, {Security}, {Software Lifecycle}, {AWS Well-Architected}, {Devops}, {DevSecOps}, {Snyk}, {Aquasec}, {Trivy}, {SCA}, {Checkov}, {Bridgecrew}, {Bash}, {On-Call}, {Pager Duty}, {Agile}, {Jira}, {Confluence}, {Project Management}, {Scrum}, {Technical Writing}, {Internal Training}}
+\skillstext{
+  {Python}, {C++}, {Bash},{AWS}, {RDS}, {SAM}, {Serverless}, {Terraform}, {Ansible}, {Docker}, {Kubernetes}, {Packer}, {Vagrant},{Git}, {Github Actions}, {GitLab CI},{Linux}, {CentOS}, {DevOps}, {Security}, {Software Lifecycle}, {DevSecOps}, {Snyk}, {Aquasec}, {Trivy}, {SCA}, {Checkov}, {Bridgecrew}, {AWS Well-Architected}, {Mentoring}, {Management}, {Leadership}, {Project Management}, {Agile}, {Scrum}, {Kanban}, {On-Call}, {Pager Duty}, {Jira}, {Confluence}, {Technical Writing}, {Internal Training},{Grafana}, {Prometheus}, {Alert Manager}, {Loki}, {DataDog}, {FluxCD}, {Helm}
+}
 
 \makeprofile
 %%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -37,32 +37,39 @@
   {Senior DevOps Engineer}
   {Century Tech}
   {
-    Streamlined CI/CD pipelines.\\
-    Migrated K8S deployments\\
-    Implemented Infrastructure as Code (IaC)\\
-    Boosting infrastructure reproducibility.\\
-    Enhanced system monitoring, resulting.\\
-    Optimized container orchestration.
+    Streamlined Gitlab CICD.\\
+    Manage AMIs with Packer, Puppet, Ansible\\
+    Infrastructure migration to AWS Serverless and EKS\\
+    Enhancing Observability with Prometheus, Grafana, Loki\\
+    Migrated K8S deployments to helm and FluxCD\\
+    Implemented Infrastructure as Code (IaC) with terraspaspace\\
+    Improving Container Security with Aquasec Trivi\\
   }
   \twentyitem
   {06/2022 - 06/2023}
-  {DevSecOps Lead Engineer}
+  {DevSecOps Lead Engineer/Deputy Head of DevOps}
   {ITV}
-  {Building DevOps Team(recruitment, ways of working, processes).\\
-    Improve and Maintain Serverless Infrastructure.\\
-    Developing Disaster Recovery Plan.\\
-    Enabling E2E observability of infrastructure across teams.\\
-    Drive Audit and Security requirements\\
+  {Building DevOps Team(recruitment, onboarding, mentoring).\\
+    Threat Modelling and Security Architecture.\\
+    Infrastructure cost optimasation\\
+    Manage/enhance CICD with Github Actions.\\
+    Developing Disaster Recovery Architecture.\\
+    AWS Well Architecture Framework Delivery\\
+    Deliver Audit and Cyber Security\\
   }
   \twentyitem
   {09/2021-06/2022}
   {Senior DevSecOps Engineer}
   {Sky}
-  {Build and Maintain AWS K8S infrastructure.\\
-    Security Incident Response (24/7 on-call rota).\\
+  {Architech and build AWS infrastructure with Terraform\\
+    Implementing AWS Well-Architected Framework\\
+    Implementing Security Best Practices\\
+    Develop CICD with Github Actions\\
+    Security Incident Response\\
     Scrum Master on Team Projects.\\
     Internal Security Training.\\
     Develop Observability and Security tools.
+
   }
   \twentyitem
   {06/2020-09/2021}
@@ -71,6 +78,8 @@
   {Enhance AWS infrastructure.\\
     Developing internal software to accommodate custom security needs.\\
     Developing and maintaining internal tools to improve the SecuritySecurity of the platform.\\
+    Linux Patching and Vulnerability Management.\\
+    Linux Provisioning with Ansible
     Support the team's recruitment and onboarding process.
   }
   \twentyitem
@@ -93,6 +102,10 @@
     CI/CD with Jenkins and Gitlab
   }
 \end{twenty}
+
+% add page break to avoid section overlap
+
+\newpage
 
 
 \section{Achivements}

@@ -194,7 +194,7 @@
       \renewcommand{\arraystretch}{1.6}
 
       % table with icons
-      \begin{tabular}{c @{\hskip 0.2cm} p{5cm}}
+      \begin{tabular}{l @{\hskip 0.5cm} p{5cm}}
         % CV date
         \ifthenelse{\equal{\givencvdate}{}}{}{\textsc{\Large\icon{\Info}} & \givencvdate\\}
         % CV address
@@ -207,6 +207,7 @@
         \ifthenelse{\equal{\givencvmail}{}}{}{\textsc{\large\icon{@}} & \givencvmail\\}
       \end{tabular}
 
+
       % about me text
       \vspace*{1cm}
       \profilesection{About me}{3.2cm}
@@ -218,7 +219,7 @@
       % \givenskill
       \giventextskill
       \noindent
-      \scriptsize
+      % \scriptsize
       % \noindent
       % (*)[The skill scale is from 0 (Fundamental Awareness) to 6 (Expert).]
 
