@@ -1,77 +1,57 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% "ModernCV" CV and Cover Letter
-% LaTeX Template
-% Version 1.1 (9/12/12)
-%
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% Original author:
-% Xavier Danaux (xdanaux@gmail.com)
-%
-% License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
-%
-% Important note:
-% This template requires the moderncv.cls and .sty files to be in the same
-% directory as this .tex file. These files provide the resume style and themes
-% used for structuring the document.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
 
-\documentclass[10pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+\documentclass[10pt,a4paper,sans]{moderncv}
 
-\moderncvstyle{banking} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{green} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\moderncvstyle{banking}
+\moderncvcolor{green}
 
-% \usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage[top=1.5cm, bottom=0.5cm, left=2cm, right=2cm]{geometry}
 
-\usepackage[scale=0.75]{geometry} % Reduce document margins
-\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
-% \setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+\setlength{\hintscolumnwidth}{3cm}
 
 %----------------------------------------------------------------------------------------
 %	NAME AND CONTACT INFORMATION SECTION
 %----------------------------------------------------------------------------------------
 
-\firstname{John} % Your first name
-\familyname{Stilia} % Your last name
+\firstname{John Stilia}
+% \familyname{Stilia}
 
-% All information in this block is optional, comment out any lines you don't need
-\title{Platform Engineer}
+\title{Senior Platform/DevOps}
 \address{Richmond, London, UK}
 \mobile{+44 07572785067}
-\email{stilia.johny@gmail.com}
-\homepage{indraft.blog} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
+\email{me@indraft.me}
+\homepage{indraft.me}
 \homepage{github.com/stiliajohny}
 
-\quote{"Collaboration means engaging in open discussions to enhance our work experience.\\
- My aim is to develop a product that's secure, sustainable, and reliable, achieved by focusing on improving the infrastructure and adapting the Software Development Life Cycle (SDLC) to our needs"}
+\quote{`Solving complex problems through open collaboration, I focus on building secure, sustainable, and reliable products by strengthening infrastructure and adapting the Software Development Life Cycle (SDLC) to meet real-world needs.`}
 
 %----------------------------------------------------------------------------------------
 
 \begin{document}
 
-\makecvtitle % Print the CV title
-
+\makecvtitle
 
 %----------------------------------------------------------------------------------------
-%	Technical SKILLS SECTION
+%	TECHNICAL SKILLS SECTION
 %----------------------------------------------------------------------------------------
-
 
 \section{Technical skills}
 
-\cvitem{Programming Languages}{\textsc Bash ( POSIX ), Python, JScript ( React(Native), Tailwind, DaisyUI ), C++,    }
-\cvitem{Cloud Infrastracture}{\textsc AWS RDS, EC2, S3, IAM Org, EKS, Lambda, AppSync, }
-\cvitem{Version Control - CI/CD}{\textsc FluxCD, Github/Actions, GitLab/CI/Security, Helm, Ansible}
-\cvitem{DevOps and Security}{\textsc AWS Well-Architect, Snyk, Trivy, Checkov, Bridgecrew, GitLab Security }
-\cvitem{Monitoring and Observability}{\textsc Grafana. Prometheus, Alert Manager, Loki, DataDog}
-\cvitem{Containerization}{\textsc Docker, Kubernetes, K3S, K8S on BareMetal, Terraform, Ansible, Packer, Prometheus, Grafana ( Whole stack)}
+\cvitem{Cloud Infrastructure}{\normalsize{Amazon Web Services (AWS) RDS, EC2, S3, IAM Organizations, Elastic Kubernetes Service (EKS), Lambda, AppSync, CloudFormation, CloudFront}}
+\cvitem{Version Control \& CI/CD}{\normalsize{ArgoCD, GitHub Actions, GitLab CI/CD, GitLab Advanced Security, Helm, Ansible, Jenkins}}
+\cvitem{Containerization \& Orchestration}{\normalsize{Docker, Kubernetes (K8s), K3S, Bare-Metal Kubernetes, Terraform, Ansible, Packer, Prometheus, Grafana, FluxCD}}
+\cvitem{DevOps \& Security}{\normalsize{AWS Well-Architected Framework, Snyk, Trivy, Checkov, Bridgecrew, vulnerability scanning, compliance automation, DevSecOps best practices}}
+\cvitem{Monitoring \& Observability}{\normalsize{Grafana, Prometheus, Alertmanager, Loki, DataDog, log aggregation, metrics collection}}
+\cvitem{Programming Languages}{\normalsize{Bash (POSIX), Python, JavaScript , C++, YAML, JSON}}
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Publications}
+
+\cvitem{\textit{The Tao of Terraform}}{Written to make Terraform less intimidating for beginners, breaking down core concepts into plain language with real-world Infrastructure as Code (IaC) examples.}
+\cvitem{\textit{The Tao of Ansible}}{A friendly, beginner-focused guide to Ansible configuration management, aimed at helping people build confidence and understand automation without the jargon.}
 
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE SECTION
@@ -79,206 +59,111 @@
 
 \section{Work Experience}
 
-\cventry{05/’24 - Present}{Senior DevOps Engineer / DevOps Lead}{\textsc{Bohemia Interactive Simulations}}{London}{}
+\cventry{05/'24 - Present}{\textbf{Senior DevOps Engineer / DevOps Lead}}{\textsc{Bohemia Interactive Simulations}}{London}{}
 {
-	Leading the design and maintenance of Ansible Playbooks to enforce Infrastructure as Code standards.\\
-	Overseeing deployment and lifecycle management of AWX (Ansible Tower) for team-wide CI/CD workflows.\\
-	Architecting and reviewing reusable Terraform modules to ensure consistency across environments.\\
-	Driving CI/CD pipeline strategy and implementation using GitLab CI/CD across multiple projects.\\
-	Leading adoption and integration of GitLab Security Suite for vulnerability scanning and compliance.\\
-	Defining and maintaining observability stack with Prometheus, Grafana, Loki, Promtail, Node Exporter, and Pushgateway.\\
-	Establishing best practices for container security using Trivy and automated GitLab pipelines.\\
-	Managing Kubernetes infrastructure on both Tanzu and AWX, including scaling, security, and governance.\\
-	Migrating legacy VM-based services to Kubernetes, ensuring minimal downtime and optimized performance.\\
-	Championing DevOps best practices through internal workshops on Kubernetes, Terraform, and GitLab CI/CD.\\
-	Mentoring junior engineers and shaping DevOps culture across the engineering department.\\
+	Ansible AWX rollout and automation.\\
+	Ansible role development for internal teams.\\
+	GitLab CI/CD pipeline template creation and optimization.\\
+	GitLab Advanced Security Suite (SAST, DAST, SCA, container scanning).\\
+	Helm chart development for release engineering.\\
+	Kubernetes training and enablement for engineering teams.\\
+	Argo CD maintenance and application deployment.\\
+	Cloudflare DNS and Web Application Firewall (WAF) management.\\
+	AWS cost optimization and cloud resource savings.\\
+	Application design for internal Helm/Kubernetes deployments.\\
+	Container security implementation (Trivy, GitLab Security).\\
+	VMware to Kubernetes migration (Tanzu and Amazon EKS).\\
 }
 
-
-\cventry{06/’23 - 05/'24}{Senior DevOps Engineer}{\textsc{Century Tech}}{London}{}
+\cventry{06/'23 - 05/'24}{\textbf{Senior DevOps Engineer} \textnormal{(Role ended due to redundancy)}}{\textsc{Century Tech}}{London}{}
 {
-	Maintained AWS Environment: EKS, S3, IAM Org, RDS.\\
-	Migrated version control from Bitbucket to Gitlab.\\
-	Transitioned CI/CD processes from Jenkins to Gitlab CI/CD.\\
-	Streamlined GitLab CI/CD processes for efficiency.\\
-	Managed AMIs with Packer and Ansible for streamlined deployment.\\
-	Upgraded EKS and migrated to a new environment for improved performance.\\
-	Managed Kubernetes deployments using Helm, FluxCD for automation.\\
-	Enhanced system monitoring with Prometheus, Grafana, AlertManager.\\
-	Boosted container security using Trivy and Gitlab Security Suite.\\
-	Supported Development team with Kubernetes deployments.\\
-	Implemented Infrastructure as Code with Terraform, Terraspace.\\
-	Delivered training on Terraform, Kubernetes, CI/CD practices.\\
+	Maintained and optimized Amazon Web Services (AWS) infrastructure: Elastic Kubernetes Service (EKS), Simple Storage Service (S3), IAM Organizations, Relational Database Service (RDS).\\
+	Led migration from Bitbucket to GitLab for version control and CI/CD pipelines.\\
+	Transitioned Jenkins to GitLab CI/CD for automated build and deployment processes.\\
+	Streamlined continuous integration and continuous delivery workflows for efficiency.\\
+	Managed Amazon Machine Images (AMIs) with Packer and Ansible automation.\\
+	Upgraded EKS clusters and migrated workloads to enhance scalability and resilience.\\
+	Managed Kubernetes deployments using Helm and GitOps practices with FluxCD.\\
+	Enhanced monitoring with Prometheus, Grafana, and Alertmanager.\\
+	Strengthened container security using Trivy and GitLab Security scanning.\\
+	Provided technical support for Kubernetes deployments.\\
+	Implemented Infrastructure as Code (IaC) with Terraform and Terraspace.\\
+	Delivered internal training on Terraform, Kubernetes, CI/CD, and cloud automation.\\
 }
 
-\cventry{06/’22 - 06/’23}{Lead DevOps Engineer}{\textsc{ITV-PlanetV}}{London}{}
+\cventry{06/'22 - 06/'23}{\textbf{Lead DevOps Engineer}}{\textsc{ITV-PlanetV}}{London}{}
 {
-	Lead a team of 43 Developers and DevOps personnel through a Lead Developer and Scrum Master.\\
-	Provided consultancy management for the Engineering Team.\\
-	Architected AWS Infrastructure: Serverless, AppSync, S3, RDS.\\
-	Modularized Terraform and CloudFormation for improved infrastructure as code practices.\\
-	Developed Python Serverless Functions for enhanced application functionality.\\
-	Conducted recruitment for DevOps and DevSecOps roles to strengthen the team.\\
-	Developed and delivered a Compliance Strategy to ensure regulatory adherence.\\
-	Formulated a Disaster Recovery plan to minimize potential downtime and data loss.\\
-	Optimized AWS Cost, achieving significant savings without compromising on performance.\\
-	Improved CI/CD SDLC processes, enhancing development and deployment efficiency.\\
-	Completed the AWS Well-Architected evaluation, ensuring best practices in cloud architecture.\\
-	Engaged in Infrastructure Deep Dive to identify and address potential improvements.\\
+	Managed a team of 43 developers and DevOps engineers.\\
+	Provided consultancy and leadership for the engineering team.\\
+	Architected AWS serverless infrastructure: AppSync, S3, RDS.\\
+	Modularized Terraform and AWS CloudFormation for improved Infrastructure as Code practices.\\
+	Developed Python serverless functions for application features.\\
+	Recruited DevOps and DevSecOps engineers.\\
+	Developed and delivered compliance strategy to meet regulatory standards.\\
+	Created disaster recovery plans for high availability.\\
+	Optimized AWS costs and cloud efficiency.\\
+	Improved CI/CD and SDLC processes.\\
+	Completed AWS Well-Architected review.\\
+	Performed deep-dive infrastructure analysis.\\
 }
 
-\cventry{09/’21 - 06/’22}{Senior DevSecOps Engineer}{\textsc{SKY Media}}{London}{}
+\cventry{09/'21 - 06/'22}{\textbf{Senior DevSecOps Engineer (Promotion)}}{\textsc{SKY Media}}{London}{}
 {
-	Served as Scrum Master for team projects.\\
-	Recruited DevSecOps and Python Developer roles.\\
-	Built AWS infrastructure: EKS, RDS, S3, IAM Org.\\
-	Applied AWS Well-Architected principles for optimal infrastructure design.\\
-	Enforced Security Best Practices across the organization.\\
-	Developed CI/CD pipelines using GitHub Actions for streamlined deployment.\\
-	Handled Security Incident Response, ensuring quick and effective mitigation.\\
-	Delivered Cyber Security Training internally to enhance team awareness and skills.\\
-	Developed AWS Golden Images management software with security agents.\\
-	Assisted in the Hiring process for Management support.\\
+	Scrum Master for engineering projects.\\
+	Recruited DevSecOps and Python developers.\\
+	Built AWS infrastructure: EKS, RDS, S3, IAM Organizations.\\
+	Applied AWS Well-Architected principles for secure and optimized architecture.\\
+	Enforced security best practices organization-wide.\\
+	Developed CI/CD pipelines using GitHub Actions.\\
+	Handled incident response for security issues.\\
+	Delivered cyber security training to staff.\\
+	Developed AWS golden images with security hardening.\\
 }
 
-\cventry{06/’20-09/’21} {DevSecOps Engineer}{\textsc{SKY Media}}{London}{}
+\cventry{06/'20-09/'21}{\textbf{DevSecOps Engineer}}{\textsc{SKY Media}}{London}{}
 {
-	Enhanced AWS infrastructure for improved performance and security.\\
-	Developed security software tools to strengthen system defenses.\\
-	Managed Linux patching to ensure up-to-date system security.\\
-	Assisted in managing vulnerability scanning and remediation efforts.\\
-	Architected an Ansible provisioning system for efficient infrastructure deployment.\\
-	Developed an in-house security analysis tool using Python for targeted threat detection.\\
-	Developed a central security dashboarding tool for comprehensive visibility and monitoring.\\
-	Managed AWS Security Groups, IAM Policies, and Roles to enforce strict access control.\\
+	Enhanced AWS cloud infrastructure performance and security.\\
+	Developed internal security tools.\\
+	Managed Linux OS patching.\\
+	Performed vulnerability scanning and remediation.\\
+	Architected Ansible provisioning for infrastructure automation.\\
+	Developed Python-based threat detection tools.\\
+	Created centralized security dashboards.\\
+	Managed AWS IAM policies and security groups.\\
 }
 
-\cventry{02/’19-06/’20}{DevSecOps Engineer}{\textsc{F-Secure}}{London}{}
+\cventry{02/'19-06/'20}{\textbf{DevSecOps Engineer (Promotion)}}{\textsc{F-Secure}}{London}{}
 {
-	AWS Deployments for over 250 Customers ( EC2, NLB, RDS )\\
-	ESXi Management
-	Python Development of Internal Tooling
-	Kernel Module Development for Network Filtering\\
+	Deployed AWS environments for over 250 customers (EC2, NLB, RDS).\\
+	Managed VMware ESXi infrastructure.\\
+	Developed internal Python automation tools.\\
+	Created Linux kernel modules for network filtering.\\
 }
 
-\cventry{09/’18-02/’19}{Support Engineer}{\textsc{F-Secure}}{London}{}
+\cventry{09/'18-02/'19}{\textbf{Support Engineer}}{\textsc{F-Secure}}{London}{}
 {
-	Account provisioning\\
-	Troubleshooting Bare Metal ESXi issues
-	Networking managment\\
+	Account provisioning and onboarding.\\
+	Troubleshooting VMware ESXi hardware issues.\\
+	Network management and configuration.\\
 }
-
-%%% Project experience
-%%% ------------------------------------------------------------
-\section*{Project Experience}
-
-
-\cvitem{VSCode Extension – PastePortal}{Think Pastebin but for developers—this VSCode extension lets you share code snippets instantly with a key combo. Made collaboration way smoother.}
-\cvitem{VSCode Extension – Yolo Commit}{Built a fun and useful VSCode extension in JavaScript that creates random commit messages, commits all changes, and pushes them. Great for temp branches before squashing.}
-\cvitem{VSCode Extension – LazyLogs}{Wrote this in JavaScript to speed up debugging—detects language and injects smart print/debug statements for selected variables.}
-\cvitem{Local K8S + Cloudflare Tunnels}{Running bare-metal Kubernetes at home to save on AWS costs. Using GitHub + Flux for GitOps, templated with Helm, and securely exposed via Cloudflare Tunnels.}
-\cvitem{Mobile App – NutriScan}{Currently developing a mobile app that uses AI to scan and calculate nutritional values of food. Built with React Native, Node.js backend, and local AI models.}
-\cvitem{Book – *The Tao of Ansible*}{Writing a practical, modern guide to mastering Ansible. Focused on real-world patterns, clarity, and purposeful automation.}
-
-
-% %----------------------------------------------------------------------------------------
-% %	EDUCATION SECTION
-% %----------------------------------------------------------------------------------------
-
-% \section{Education}
-
-% \cventry{2013}{Masters of Technology in VLSI Design And Embedded Systems}{Visvesvaraya Technological University}{Belgaum}{\textit{Percentage -- 71.7}}{First Class Distinction}  % Arguments not required can be left empty
-% \cventry{2010}{Bachelor of Engineering}{Visvesvaraya Technological University}{Belgaum}{\textit{Percentage -- 61.0}}{Specialized in Electronics and Communication}
-
-% \section{Masters Thesis}
-
-% \cvitem{Title}{\emph{DESIGN AND IMPLEMENTATION OF WEB BASED POWER QUALITY ANALYZER ON ARM Cortex M3}}
-
-% \section{Bachelors Thesis}
-
-% \cvitem{Title}{\emph{DESIGN AND IMPLEMENTATION OF POWER QUALITY ANALYZER ON PIC MICROCONTROLLER}}
-
-
-
-%%% Publications
-%%% ------------------------------------------------------------
-% \section*{Publications}
-
-% \begin{enumerate}
-
-% \item Mohammed Bilal "Attendance Logging In Webserver Using Multi Node Embedded System Connected Through Wi-Fi
-% \href{http://iaesjournal.com/online/index.php/IJRES/article/view/1237}{Link}
-
-% \item Hemant Palivela, Mohammad Bilal "An Adaptive approach combining accelerative aging and IPSec to combat against DDos attack in networks", in proceedings of National conference on Communication and Computing, Acharya Institute of Technology, Bangalore, 22nd - 24th September 2011.
-
-% \end{enumerate}
-----------------------------------------------------------------------------------------
-%	Other Experience
-%----------------------------------------------------------------------------------------
-
-% \section{Achievements}
-
-% \cvitem{2008}{Designed Charger For Electronic Ticketing Machine For KSRTC}
-% \cvitem{2012}{Google scholar citation : \href{http://scholar.google.co.in/citations?user=hcny9sIAAAAJ}{Link}}
-% \cvitem{2013}{Reviewer of 2012  International Journal of Research in Engineering and Science}
-% \cvitem{2015}{\emph{Patent} filed in India for Programmable Power Socket - 3019/CHE/2015}
-
 
 %----------------------------------------------------------------------------------------
-%	LANGUAGES SECTION
+%	PERSONAL PROJECTS SECTION
 %----------------------------------------------------------------------------------------
 
-%%\section{Languages}
-%%\cvitemwithcomment{English}{Advanced}{Read and Write}
-%%\cvitemwithcomment{Urdu}{Mothertongue}{}
-%%\cvitemwithcomment{Kannada}{Intermediate}{Read and Write}
-%%\cvitemwithcomment{Hindi}{Intermediate}{Read and Write}
+\section*{Personal Projects \& Products}
 
-%%% References
-%%% ------------------------------------------------------------
-
-
-%\section{References}
-
-%%\begin{itemize}
-%% \item Dr. Padmanabha, Principal, T John Institute Of Technology,Bangalore, India.
-%%\item S S Prasad, C E O Globals Technologies, Jayanagar, Bangalore, India.
-%%\item Dr. Ram Raj Urs, Chairman Lions Club, Bangalore Head Librarian and Course %%Director,Rajiv Gandhi University of Health Sciences, Karnataka, India.
-
-
-%%\end{itemize}
+\cvitem{VSCode Extension - PastePortal}{A Visual Studio Code extension enabling instant sharing of code snippets, improving collaboration and developer workflow.}
+\cvitem{VSCode Extension - Yolo Commit}{JavaScript-based extension that generates random commit messages, commits all changes, and pushes them for rapid development workflows.}
+\cvitem{VSCode Extension - LazyLogs}{JavaScript extension that detects programming language and injects context-aware debug statements for faster troubleshooting.}
+\cvitem{Local Kubernetes + Cloudflare Tunnels}{Deployed bare-metal Kubernetes cluster at home using GitOps (GitHub + FluxCD) with Helm templates, securely exposed via Cloudflare Tunnels.}
+\cvitem{Mobile App - NutriScan}{React Native + Node.js app using AI/ML models to scan and calculate nutritional values, designed for both iOS and Android platforms.}
+\cvitem{Book - *The Tao of Ansible*}{Beginner-friendly guide to Ansible automation, focusing on practical patterns and simplifying complex workflows.}
 
 %----------------------------------------------------------------------------------------
-%	COVER LETTER
-%----------------------------------------------------------------------------------------
-
-% To remove the cover letter, comment out this entire block
-% \cventry{} {}{\textsc{ COVER Letter}}{}{}{}
-
-%
-%{ - } % Letter recipient
-% \date{\today} % Letter date
-% \opening{Dear Sir or Madam,} % Opening greeting
-% \closing{Sincerely yours,} % Closing phrase
-% \enclosure[Attached]{curriculum vit\ae{}} % List of enclosed documents
-
-% \makelettertitle % Print letter title
-
-% \lipsum[1-3] % Dummy text
-
-% \makeletterclosing % Print letter signature
-
-%----------------------------------------------------------------------------------------
-
-
-% add date to the end of the page at the verry bottom like hte page number
-
-
 
 \closesection{
 	\textsc{Last Updated: \today}
-
 }
 
 \end{document}
-
