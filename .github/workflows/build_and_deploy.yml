@@ -8,6 +8,7 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    name: Build PDF and Upload
     steps:
       - name: 🛎️ Checkout
         uses: actions/checkout@v3
@@ -15,8 +16,8 @@ jobs:
       - name: 🤖 Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: Twenty-Seconds_cv.tex
-          post_compile: "mkdir build && mv Twenty-Seconds_cv.pdf build"
+          root_file: JohnStilia-CV.tex
+          post_compile: "mkdir build && mv JohnStilia-CV.pdf build"
 
       - name: 🚀 Deploy
         uses: JamesIves/github-pages-deploy-action@v4.3.3
