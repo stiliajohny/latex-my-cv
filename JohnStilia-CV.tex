@@ -1,422 +1,242 @@
-% FortySecondsCV LaTeX template
-% Copyright © 2019-2020 René Wirnata <rene.wirnata@pandascience.net>
-% Licensed under the 3-Clause BSD License. See LICENSE file for details.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% "ModernCV" CV and Cover Letter
+% LaTeX Template
+% Version 1.1 (9/12/12)
 %
-% Please visit https://github.com/PandaScience/FortySecondsCV for the most
-% recent version! For bugs or feature requests, please open a new issue on
-% github.
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
 %
-% Contributors
-% ------------
-% * ifokkema
-% * Bertbk
-% * Hespe
+% Original author:
+% Xavier Danaux (xdanaux@gmail.com)
 %
-% Attributions
-% ------------
-% * fortysecondscv is based on the twentysecondcv class by Carmine Spagnuolo
-%   (cspagnuolo@unisa.it), released under the MIT license and available under
-%   https://github.com/spagnuolocarmine/TwentySecondsCurriculumVitae-LaTex
-% * further attributions are indicated immediately before corresponding code
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the moderncv.cls and .sty files to be in the same 
+% directory as this .tex file. These files provide the resume style and themes 
+% used for structuring the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
 
-%-------------------------------------------------------------------------------
-%                             ADDITIONAL PACKAGES
-%-------------------------------------------------------------------------------
-\documentclass[
-	a4paper,
-	% showframes,
-	% vline=2.2em,
-	% maincolor=cvgreen,
-	% sidecolor=gray!50,
-	% sectioncolor=red,
-	% subsectioncolor=orange,
-	% itemtextcolor=black!80,
-	% sidebarwidth=0.4\paperwidth,
-	% topbottommargin=0.03\paperheight,
-	% leftrightmargin=20pt,
-	% profilepicsize=4.5cm,
-	% profilepicborderwidth=3.5pt,
-	% profilepicstyle=profilecircle,
-	% profilepiczoom=1.0,
-	% profilepicxshift=0mm,
-	% profilepicyshift=0mm,
-	% profilepicrounding=1.0cm,
-]{fortysecondscv}
+\documentclass[10pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
 
-% improve word spacing and hyphenation
-\usepackage{microtype}
-\usepackage{ragged2e}
+\moderncvstyle{banking} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{green} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 
-% uncomment in case you don't want any hyphenation
-% \usepackage[none]{hyphenat}
+% \usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
 
-% take care of proper font encoding
-\ifxetexorluatex
-	\usepackage{fontspec}
-	\defaultfontfeatures{Ligatures=TeX}
-%	\newfontfamily\headingfont[Path = fonts/]{segoeuib.ttf} % local font
-\else
-	\usepackage[utf8]{inputenc}
-	\usepackage[T1]{fontenc}
-%	\usepackage[sfdefault]{noto} % use noto google font
-\fi
+\usepackage[scale=0.75]{geometry} % Reduce document margins
+\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
+% \setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
 
-% enable mathematical syntax for some symbols like \varnothing
-\usepackage{amssymb}
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
 
-% bubble diagram configuration
-\usepackage{smartdiagram}
-\smartdiagramset{
-	% default font size is \large, so adjust to harmonize with sidebar layout
-	bubble center node font = \footnotesize,
-	bubble node font = \footnotesize,
-	% default: 4cm/2.5cm; make minimum diameter relative to sidebar size
-	bubble center node size = 0.4\sidebartextwidth,
-	bubble node size = 0.25\sidebartextwidth,
-	distance center/other bubbles = 1.5em,
-	% set center bubble color
-	bubble center node color = maincolor!70,
-	% define the list of colors usable in the diagram
-	set color list = {maincolor!10, maincolor!40,
-	maincolor!20, maincolor!60, maincolor!35},
-	% sets the opacity at which the bubbles are shown
-	bubble fill opacity = 0.8,
-}
+\firstname{John} % Your first name
+\familyname{Stilia} % Your last name
 
+% All information in this block is optional, comment out any lines you don't need
+\title{Platform Engineer}
+\address{Richmond, London, UK}
+\mobile{+44 07572785067}
+\email{stilia.johny@gmail.com}
+\homepage{https://indraft.blog} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
 
-%-------------------------------------------------------------------------------
-%                            PERSONAL INFORMATION
-%-------------------------------------------------------------------------------
-%% mandatory information
-% your name
-\cvname{John Stilia}
-% job title/career
-\cvjobtitle{Dev, DevOps, DevSecOps\\[0.2em] Engineer}
+\quote{"Collaboration means engaging in open discussions to enhance our work experience.\\
+ My aim is to develop a product that's secure, sustainable, and reliable, achieved by focusing on improving the infrastructure and adapting the Software Development Life Cycle (SDLC) to our needs"}
 
-%% optional information
-% profile picture
-% \cvprofilepic{pics/profile.png}
+%----------------------------------------------------------------------------------------
 
-% NOTE: ordering in sidebar will mimic the following order
-% date of birth
-% \cvbirthday{\today}
-% short address/location, use \newline if more than 1 line is required
-\cvaddress{Richmond, London}
-% phone number
-\cvphone{+44 7572785067}
-% personal website
-\cvsite{https://indraft.blog}
-% email address
-\cvmail{stilia.johny@gmail.com}
-% pgp key
-% \cvkey{4096R/FF00FF00}{0xAABBCCDDFF00FF00}
-% any other custom entry
-% \cvcustomdata{\faFlag}{Chinese}
-
-%-------------------------------------------------------------------------------
-%                              SIDEBAR 1st PAGE
-%-------------------------------------------------------------------------------
-% add more profile sections to sidebar on first page
-\addtofrontsidebar{
-	% include gosquare national flags from https://github.com/gosquared/flags;
-	% naming according to ISO 3166-1 alpha-2 country codes
-	\graphicspath{{pics/flags/}}
-
-	% social network accounts incl. proper hyperlinks
-	\profilesection{Social Network}
-		\begin{icontable}{1.5em}{1em}
-			\social{\faLinkedin}
-				{https://www.linkedin.com/in/johnstilia/}
-				{johnstilia}
-			\social{\faMedium}
-				{https://stilia-johny.medium.com/}
-				{stilia johny}
-			\social{\faGithub}
-				{https://github.com/stiliajohny}
-				{stiliajohny}
-
-		\end{icontable}
-
-	% \profilesection{Languages}
-	% 	\pointskill{\flag{CN.png}}{Chinese}{5}
-	% 	\pointskill{\flag{DE.png}}{German}{3}
-	% \pointskill{\flag{GB.png}}{English}{3}
-	% \pointskill{\flag{FR.png}}{French}{3}
-
-	% \profilesection{Hard Skills}
-	% 	\skill{\faBalanceScale}{Sleeping almost all day}
-	% 	\skill{\faSitemap}{Eating a lot of bamboo sprouts}
-	% 	\skill{\faGraduationCap}{Relaxing rest of the day}
-
-\profilesection{Engineering Skills}
-\pointskill{\faCode}{Programming Languages}
-	\skill[1.2em]{\faSkillIcon}{Python}
-	\skill[1.2em]{\faSkillIcon}{C++}
-	\skill[1.2em]{\faSkillIcon}{JS}
-	\skill[1.2em]{\faSkillIcon}{Bash}
-
-\pointskill{\faCloud}{Cloud and Infrastructure}
-	\skill[1.2em]{\faSkillIcon}{AWS}
-	\skill[1.2em]{\faSkillIcon}{Serverless}
-	\skill[1.2em]{\faSkillIcon}{Terraform/Terraspace}
-	\skill[1.2em]{\faSkillIcon}{Ansible}
-	\skill[1.2em]{\faSkillIcon}{Docker/Kubernetes}
-	\skill[1.2em]{\faSkillIcon}{Vagrant}
- 	\skill[1.2em]{\faSkillIcon}{Helm}
-
-\pointskill{\faFile}{Version Control and CI/CD}
-	\skill[1.2em]{\faSkillIcon}{FluxCD}
-	\skill[1.2em]{\faSkillIcon}{Concourse}
-	\skill[1.2em]{\faSkillIcon}{Github / Actions}
-	\skill[1.2em]{\faSkillIcon}{GitLab / CI}
-
-\pointskill{\faLock}{DevOps and Security}
-	\skill[1.2em]{\faSkillIcon}{AWS Well-Architected}
-	\skill[1.2em]{\faSkillIcon}{Snyk}
-	\skill[1.2em]{\faSkillIcon}{Trivy}
-	\skill[1.2em]{\faSkillIcon}{Checkov}
-	\skill[1.2em]{\faSkillIcon}{Bridgecrew}
-
-\pointskill{\faGlasses}{Monitoring and Observability}
-	\skill[1.2em]{\faSkillIcon}{Grafana}
-	\skill[1.2em]{\faSkillIcon}{Prometheus}
-	\skill[1.2em]{\faSkillIcon}{Alert Manager}
-	\skill[1.2em]{\faSkillIcon}{Loki}
-	\skill[1.2em]{\faSkillIcon}{DataDog}
-
-}
-
-
-%-------------------------------------------------------------------------------
-%                              SIDEBAR 2nd PAGE
-%-------------------------------------------------------------------------------
-\addtobacksidebar{
-	\profilesection{About Me}
-	\aboutme{
-		The giant panda is a terrestrial animal and primarily spends its life
-		roaming and feeding in the bamboo forests of the Qinling Mountains and in
-		the hilly province of Sichuan.
-	}
-
-	\profilesection{Diagrams}
-	\begin{sidebarminipage}
-		\chartlabel{Bubble}
-		\chartlabel{Diagrams}
-		\chartlabel{with}
-		\chartlabel{proper}
-		\chartlabel{overflow}
-		\chartlabel{protection}
-		\chartlabel{for}
-		\chartlabel{labels}
-	\end{sidebarminipage}
-
-	\begin{figure}\centering
-		\smartdiagram[bubble diagram]{
-			\textcolor{white}{\textbf{Being a}} \\
-			\textcolor{white}{\textbf{Panda}}, % center bubble
-			\textcolor{black!90}{Eating},
-			\textcolor{black!90}{Sleeping},
-			\textcolor{black!90}{Rolling},
-			\textcolor{black!90}{Playing},
-			\textcolor{black!90}{Chilling}
-		}
-	\end{figure}
-
-	\chartlabel{Wheel Chart}
-
-	\wheelchart{3.7em}{2em}{%
-	20/3em/maincolor!50/Chill,
-	15/3em/maincolor!15/Play,
-	30/4em/maincolor!40/Sleep,
-	20/3em/maincolor!20/Eat
-	}
-
-	\profilesection{Barskills}
-	\barskill{\faSkyatlas}{Wearing asian rice hats}{60}
-	\barskill{\faImage}{Playing Chess}{30}
-	\barskill{\faMusic}{Playing the bamboo flute}{50}
-
-	\profilesection{Memberships}
-	\begin{memberships}
-		\membership[4em]{pics/logo.png}{PandaScience.net}
-		\membership[4em]{pics/logo.png}{Some longer text spanning over more than
-			only one line}
-	\end{memberships}
-}
-
-
-%-------------------------------------------------------------------------------
-%                         TABLE ENTRIES RIGHT COLUMN
-%-------------------------------------------------------------------------------
 \begin{document}
 
-\makefrontsidebar
-
-\cvsection{Professional Software Portfolio}
-\begin{cvtable}[2]
-	\cvitem{}{Pasteportal.info}{AWS, Lambda, Python, JS}{A better pastebin for Engineers, share code with ease. }
-	\cvitem{}{LazyLogs VSCode Extension}{Node(JS)}{Easy print() and console.log() with one key combo}
-	\cvitem{}{yoloCommit VSCode Extension}{Node(JS)}{Quick commit when you need to push fast}
-	\cvitem{}{SoundWaves iOS app}{React native ( JS )}{Relaxing Sounds for focus or sleep.}
-
-\end{cvtable}
-
-\cvsection{Experiance}
-
-\begin{cvtable}[1.5]
-	\cvitem{06/'23 - Present}{Senior DevOps Engineer}{Century Tech}
-	{
-		Streamlined GitLab CI/CD processes.\\
-		Managed AMIs with Packer and Ansible.\\
-		Led AWS Serverless, EKS migration.\\
-		Enhanced monitoring with Prometheus.\\
-		Moved K8S to Helm, FluxCD.\\
-		Implemented IaC with Terraspace.\\
-		Boosted container security with Trivy.
-	}
-
-	\cvitem{06/'22 - 06/'23}{DevSecOps Lead Engineer}{ITV/PlanetV}
-	{
-		Hire a DevOps team.\\
-		Worked on Threat Modelling.\\
-		Optimized infrastructure costs.\\
-		Improved CI/CD Software Lifecycle \\
-		Created Disaster Recovery Architecture.\\
-		Delivered AWS Well-Architected projects.\\
-		Led Compliance Audits and Security.
-	}
-
-	\cvitem{09/'21-06/'22}{Senior DevSecOps Engineer}{Sky Media}
-	{
-		Built AWS infrastructure with Terraform.\\
-		Applied AWS Well-Architected principles.\\
-		Enforced Security Best Practices.\\
-		Developed CI/CD with GitHub Actions.\\
-		Handled Security Incident Response.\\
-		Scrum Master in team projects.\\
-		Led Security Training, tool development.
-	}
-
-	\cvitem{06/'20-09/'21}{DevSecOps Engineer}{Sky Media}
-	{
-		Enhanced AWS infrastructure.\\
-		Developed security software, tools.\\
-		Managed Linux Patching, Vulnerability.\\
-		Implemented Ansible Linux Provisioning.\\
-		Supported team recruitment, onboarding.
-	}
-
-	\cvitem{02/'19-06/'20}{DevSecOps Engineer}{F-Secure}{}
-	\cvitem{09/'18-02/'19}{Support Engineer}{F-Secure}{}
-	\cvitem{04/'17-10/'17}{Sales}{Moleskine}{}
-	\cvitem{05/'16-04/'17}{Store Manager}{Maplin}{}
-	\cvitem{05/'16-04/'17}{Assistant Manager}{Maplin, Strand, London, United Kingdom}{}
-	\cvitem{03/'15-05/'16}{Assistant Manager}{Maplin, Canary Wharf, London}{}
-	\cvitem{11/'14-03/'15}{Store Team Leader}{Maplin, Saint Paul, London}{}
-
-\end{cvtable}
+\makecvtitle % Print the CV title
 
 
+%----------------------------------------------------------------------------------------
+%	Technical SKILLS SECTION
+%----------------------------------------------------------------------------------------
 
 
-% \cvsubsection{Study}
-% \begin{cvtable}[1.5]
-% 	\cvitem{2006 -- 2008}{Master Studies Panda Science}{Panda Academy}
-% 		{Focus: Advanced rice hat studies and nouveau rain-reflecting cover
-% 		materials.}
-% 	\cvitem{}{Master Theses ($\varnothing\, 1,0$)}{Asian Rice Hat Institute}
-% 		{Impact of solar radiation onto rice hat cover materials with special
-% 		attention to water resistance.}
-% 	\cvitem{2003 -- 2006}{Bachelor Studies PandaScience}{Panda Academy}
-% 		{Focus: Bamboo morphology and its usage in different craftmanships.}
-% 	\cvitem{}{Bachelor Theses ($\varnothing\, 1,0$)}{Bamboo Institute}
-% 		{The bambo flute: An underestimated instrument in orchestras?}
-% \end{cvtable}
+\section{Technical skills}
 
-% \cvsection{Publications}
-% \begin{cvtable}
-% 	\cvpubitem{Cooking: 100 recipes for lazy Pandas}{Me and My Panda Friends}
-% 		{Panda's Culinary World}{2010}
-% 	\cvpubitem{Pandastasia}{Still Me}{Bamboo Books Assoc.}{2005}
-% \end{cvtable}
+\cvitem{Programming Languages}{\textsc Bash ( POSIX ), Python, JScript ( React(Native), Tailwind, DaisyUI ), C++,    }
+\cvitem{Cloud Infrastracture}{\textsc AWS RDS, EC2, S3, IAM Org, EKS, Lambda, AppSync, }
+\cvitem{Version Control - CI/CD}{\textsc FluxCD, Concourse, Github/Actions, GitLab/CI/Security, Helm, Ansible}
+\cvitem{DevOps and Security}{\textsc AWS Well-Architect, Snyk, Trivy, Checkov, Bridgecrew, GitLab Security }
+\cvitem{Monitoring and Observability}{\textsc Grafana. Prometheus, Alert Manager, Loki, DataDog}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Work Experience}
+
+\cventry{06/’23 - Present}{Senior DevOps Engineer}{\textsc{Century Tech}}{London}{}
+{
+	Maintain AWS Environment ( EKS, S3, IAM Org, RDS )\\
+	Streamlined GitLab CI/CD processes.\\
+	Managed AMIs with Packer and Ansible/Puppet.\\
+	Led AWS Serverless, EKS migration.\\
+	Enhanced monitoring with Prometheus,Grafana, AlertManager.\\
+	Boosted container security with Trivy and Gitlab Security Suite.\\
+	Moved K8S to Helm, FluxCD.\\
+	Support Dev team wit K8S deployments\\
+	Implemented IaC with Terraspace/Terraform.\\
+	Deliver Terraform, k8s training\\
+}
+
+\cventry{06/’22 - 06/’23}{Lead DevOps Engineer}{\textsc{ITV-PlanetV}}{London}{}
+{
+	Architect AWS Infra ( Serverless, AppSync, S3, RDS) \\
+	Modulise Terraform Cloud Formation
+	Develop Python Serverless Functions \\
+	Recruit for DevOps and DevSecOps \\
+	Deliver Compliance Strategy\\
+	Develop Disaster Recovery plan\\
+	Optimise AWS Cost \\
+	Improved CI/CD SDLC \\
+	Delivered AWS Well-Architect evaluation\\
+	Engaging to Infrastructure Deep Dive
+}
+\cventry{09/’21 - 06/’22}{Senior DevSecOps Engineer}{\textsc{SKY Media}}{London}{}
+{
+	Scrum Master in team projects\\
+	Recruitment of DevSecOps and Python Developer
+	Built AWS infrastructure(EKS, RDS, S3, IAM Org) \\
+	Applied AWS Well-Architect principles \\
+	Enforced Security Best Practices\\
+	Developed CI/CD with GitHub Actions\\
+	Handled Security Incident Response.\\
+	Deliver Cyber Security Training Internally\\
+}
+
+\cventry{06/’20-09/’21} {DevSecOps Engineer}{\textsc{SKY Media}}{London}{}
+{
+	Enhanced AWS infrastructure \\
+	Developed security software, tools \\
+	Managed Linux Patching, Vulnerability \\
+	Architect Ansible Provisioning \\
+	Python Development of In-House Security Analysis tool
+}
+
+\cventry{02/’19-06/’20}{DevSecOps Engineer}{\textsc{F-Secure}}{London}{}
+{
+	AWS Deployments for over 250 Customers ( EC2, NLB, RDS )\\
+	ESXi Management
+	Python Development of Internal Tooling
+	Kernel Module Development for Network Filtering
+}
+\cventry{09/’18-02/’19}{Support Engineer}{\textsc{F-Secure}}{London}{}
+{
+	Account provisioning\\
+	Troubleshooting Bare Metal ESXi issues
+	Networking managment
+}
+
+%%% Project experience
+%%% ------------------------------------------------------------
+\section*{Project Experience}
+
+\cvitem{VSCode Extension - PastePortal}{Imagine PasteBin, but for Developers, VSCode extension that allow to share code snippets in one key-combo. This helped me to collaborate better}
+\cvitem {VSCode Extension - Yolo Commit}{I wrote a VSCode extension in JavaScript that will create a random commit message and commit all files and push. Sometimes you just need to push code in a branch, then squash}
+\cvitem {VSCode Extension - LazyLogs}{This is a VSCode extension, written in JavaScript, It will detect the language and add a relevant print statement of the highlighted variable. Great for debugging }
+\cvitem{Local K8S with CloudFlare Tunneling}{AWS Is too expensive, so I run my own HomeLab, Using K8S on BareMetal and CloudFlare Tunneling to avoid opening ports. Deployed with Github and Flux, templating with Help}
+
+% %----------------------------------------------------------------------------------------
+% %	EDUCATION SECTION
+% %----------------------------------------------------------------------------------------
+
+% \section{Education}
+
+% \cventry{2013}{Masters of Technology in VLSI Design And Embedded Systems}{Visvesvaraya Technological University}{Belgaum}{\textit{Percentage -- 71.7}}{First Class Distinction}  % Arguments not required can be left empty
+% \cventry{2010}{Bachelor of Engineering}{Visvesvaraya Technological University}{Belgaum}{\textit{Percentage -- 61.0}}{Specialized in Electronics and Communication}
+
+% \section{Masters Thesis}
+
+% \cvitem{Title}{\emph{DESIGN AND IMPLEMENTATION OF WEB BASED POWER QUALITY ANALYZER ON ARM Cortex M3}}
+
+% \section{Bachelors Thesis}
+
+% \cvitem{Title}{\emph{DESIGN AND IMPLEMENTATION OF POWER QUALITY ANALYZER ON PIC MICROCONTROLLER}}
 
 
-% \cvsection{Awards}
-% \begin{cvtable}
-% 	\cvitem{2010 -- now}{Panda of the Year}{Panda World Forum}{}
-% 	\cvitem{2005 -- now}{Face of World Wide Fund for Nature}{WWF}{}
-% 	\cvitem{2000}{Winner of Bamboo Sprouts Eating Contest}{Bamboo Society}{}
-% \end{cvtable}
+
+%%% Publications
+%%% ------------------------------------------------------------
+% \section*{Publications}
+
+% \begin{enumerate}
+
+% \item Mohammed Bilal "Attendance Logging In Webserver Using Multi Node Embedded System Connected Through Wi-Fi
+% \href{http://iaesjournal.com/online/index.php/IJRES/article/view/1237}{Link}
+
+% \item Hemant Palivela, Mohammad Bilal "An Adaptive approach combining accelerative aging and IPSec to combat against DDos attack in networks", in proceedings of National conference on Communication and Computing, Acharya Institute of Technology, Bangalore, 22nd - 24th September 2011.
+
+% \end{enumerate}
+----------------------------------------------------------------------------------------
+%	Other Experience
+%----------------------------------------------------------------------------------------
+
+% \section{Achievements}
+
+% \cvitem{2008}{Designed Charger For Electronic Ticketing Machine For KSRTC}
+% \cvitem{2012}{Google scholar citation : \href{http://scholar.google.co.in/citations?user=hcny9sIAAAAJ}{Link}} 
+% \cvitem{2013}{Reviewer of 2012  International Journal of Research in Engineering and Science}
+% \cvitem{2015}{\emph{Patent} filed in India for Programmable Power Socket - 3019/CHE/2015}
 
 
-\cvsection{Extra-Curricular Activities}
-\begin{cvtable}
-	\cvitemshort{Racing}{Motorbike Racing. Track only}
-	\cvitemshort{Coding}{Usually late nights/early mornings coding.}
-	\cvitemshort{Electronics}{Developing IoT from the ground Up}
-\end{cvtable}
+%----------------------------------------------------------------------------------------
+%	LANGUAGES SECTION
+%----------------------------------------------------------------------------------------
+
+%%\section{Languages}
+%%\cvitemwithcomment{English}{Advanced}{Read and Write}
+%%\cvitemwithcomment{Urdu}{Mothertongue}{}
+%%\cvitemwithcomment{Kannada}{Intermediate}{Read and Write}
+%%\cvitemwithcomment{Hindi}{Intermediate}{Read and Write}
+
+%%% References
+%%% ------------------------------------------------------------
 
 
-% \newpage
-% \makebacksidebar
-% % \newgeometry{
-% % 	top=\topbottommargin,
-% % 	bottom=\topbottommargin,
-% % 	right=\leftrightmargin,
-% % 	left=\leftrightmargin
-% % }
+%\section{References}
 
-% \cvsection{section}
-% \cvsubsection{Subsection}
-% \begin{cvtable}
-% 	\cvitem{<dates>}{<cv-item title>}{<location>}{<optional: description>}
-% \end{cvtable}
+%%\begin{itemize}
+%% \item Dr. Padmanabha, Principal, T John Institute Of Technology,Bangalore, India.
+%%\item S S Prasad, C E O Globals Technologies, Jayanagar, Bangalore, India.
+%%\item Dr. Ram Raj Urs, Chairman Lions Club, Bangalore Head Librarian and Course %%Director,Rajiv Gandhi University of Health Sciences, Karnataka, India. 
 
-% \cvsection{cvitem}
-% \cvsubsection{Multi-line with longer description}
-% \begin{cvtable}
-% 	\cvitem{date}{Description}{location}{Some longer and more detailed
-% 		description, that takes two lines of space instead of only one.}
-% 	\cvitem{date}{Description}{location}{Some longer and more detailed
-% 		description, that takes two lines of space instead of only one.}
-% 	\cvitem{date}{Description}{location}{Some longer and more detailed
-% 		description, that takes two lines of space instead of only one.}
-% \end{cvtable}
 
-% \cvsubsection{One-line without description}
-% \begin{cvtable}
-% 	\cvitem{Award}{One-line description}{Sponsor}{}
-% 	\cvitem{Award}{One-line description}{Sponsor}{}
-% 	\cvitem{Award}{One-line description}{Sponsor}{}
-% \end{cvtable}
+%%\end{itemize}
 
-% \cvsection{cvitemshort}
-% \cvsubsection{One-line}
-% \begin{cvtable}
-% 	\cvitemshort{Key}{Some further description}
-% 	\cvitemshort{Key}{Some further description}
-% 	\cvitemshort{Key}{Some further description}
-% \end{cvtable}
+%----------------------------------------------------------------------------------------
+%	COVER LETTER
+%----------------------------------------------------------------------------------------
 
-% \cvsubsection{Multi-line with longer description}
-% \begin{cvtable}
-% 	\cvitemshort{Key}{Some further description. Can fill even more than
-% 		only one single line while still keeping the correct indendation level.}
-% 	\cvitemshort{Key}{Some further description. Can fill even more than
-% 		only one single line while still keeping the correct indendation level.}
-% 	\cvitemshort{Key}{Some further description. Can fill even more than
-% 		only one single line while still keeping the correct indendation level.}
-% \end{cvtable}
+% To remove the cover letter, comment out this entire block
+% \cventry{} {}{\textsc{ COVER Letter}}{}{}{}
 
-% \cvsection{cvpubitem}
-% \begin{cvtable}
-% 	\cvpubitem{Publication title}{Authors}{Journal}{Year}
-% 	\cvpubitem{Publication title}{Authors}{Journal}{Year}
-% 	\cvpubitem{Publication title that is spanning over multiple lines and still
-% 		does not look too bad}{Authors}{Journal}{Year}
-% \end{cvtable}
+% 
+%{ - } % Letter recipient
+% \date{\today} % Letter date
+% \opening{Dear Sir or Madam,} % Opening greeting
+% \closing{Sincerely yours,} % Closing phrase
+% \enclosure[Attached]{curriculum vit\ae{}} % List of enclosed documents
 
-\cvsignature
+% \makelettertitle % Print letter title
+
+% \lipsum[1-3] % Dummy text
+
+% \makeletterclosing % Print letter signature
+
+%----------------------------------------------------------------------------------------
+
 
 \end{document}
+
