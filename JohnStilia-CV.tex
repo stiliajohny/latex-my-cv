@@ -1,108 +1,424 @@
-\documentclass[]{twentysecondcv}
-\begin{document}
+% FortySecondsCV LaTeX template
+% Copyright © 2019-2020 René Wirnata <rene.wirnata@pandascience.net>
+% Licensed under the 3-Clause BSD License. See LICENSE file for details.
+%
+% Please visit https://github.com/PandaScience/FortySecondsCV for the most
+% recent version! For bugs or feature requests, please open a new issue on
+% github.
+%
+% Contributors
+% ------------
+% * ifokkema
+% * Bertbk
+% * Hespe
+%
+% Attributions
+% ------------
+% * fortysecondscv is based on the twentysecondcv class by Carmine Spagnuolo
+%   (cspagnuolo@unisa.it), released under the MIT license and available under
+%   https://github.com/spagnuolocarmine/TwentySecondsCurriculumVitae-LaTex
+% * further attributions are indicated immediately before corresponding code
 
-%%%%%%%%%%%%%%%%%%%%%%
-%% PROFILE SIDE BAR %%
-%%%%%%%%%%%%%%%%%%%%%%
-% personal info
-\cvname{John Stilia}                   % your name
-\cvjobtitle{DevSecOps Engineer}          % your actual job position
-\cvaddress{London, United Kingdom}       % address
-\cvnumberphone{+44 07572785067 }   % telephone number
-\cvmail{stilia.johny@gmail.com}    %e-mail
-\cvsite{http://indraft.blog} % personal site
 
-\vspace{5cm}
+%-------------------------------------------------------------------------------
+%                             ADDITIONAL PACKAGES
+%-------------------------------------------------------------------------------
+\documentclass[
+	a4paper,
+	% showframes,
+	% vline=2.2em,
+	% maincolor=cvgreen,
+	% sidecolor=gray!50,
+	% sectioncolor=red,
+	% subsectioncolor=orange,
+	% itemtextcolor=black!80,
+	% sidebarwidth=0.4\paperwidth,
+	% topbottommargin=0.03\paperheight,
+	% leftrightmargin=20pt,
+	% profilepicsize=4.5cm,
+	% profilepicborderwidth=3.5pt,
+	% profilepicstyle=profilecircle,
+	% profilepiczoom=1.0,
+	% profilepicxshift=0mm,
+	% profilepicyshift=0mm,
+	% profilepicrounding=1.0cm,
+]{fortysecondscv}
 
-\aboutme{
-  I am a diverse DevSecOps Engineer. with a proven track record of building highly available, reliable and secure systems. I have leadership experience leading  DevOps teamS, building and delivering projects for financial and retail clients.
-} % About me section
+% improve word spacing and hyphenation
+\usepackage{microtype}
+\usepackage{ragged2e}
 
+% uncomment in case you don't want any hyphenation
+% \usepackage[none]{hyphenat}
 
+% take care of proper font encoding
+\ifxetexorluatex
+	\usepackage{fontspec}
+	\defaultfontfeatures{Ligatures=TeX}
+%	\newfontfamily\headingfont[Path = fonts/]{segoeuib.ttf} % local font
+\else
+	\usepackage[utf8]{inputenc}
+	\usepackage[T1]{fontenc}
+%	\usepackage[sfdefault]{noto} % use noto google font
+\fi
 
-\skillstext{
-  {Python}, {C++}, {Bash},{AWS}, {RDS}, {SAM}, {Serverless}, {Terraform}, {Ansible}, {Docker}, {Kubernetes}, {Packer}, {Vagrant},{Git}, {Github Actions}, {GitLab CI},{Linux}, {CentOS}, {DevOps}, {Security}, {Software Lifecycle}, {DevSecOps}, {Snyk}, {Aquasec}, {Trivy}, {SCA}, {Checkov}, {Bridgecrew}, {AWS Well-Architected}, {Mentoring}, {Management}, {Leadership}, {Project Management}, {Agile}, {Scrum}, {Kanban}, {On-Call}, {Pager Duty}, {Jira}, {Confluence}, {Technical Writing}, {Internal Training},{Grafana}, {Prometheus}, {Alert Manager}, {Loki}, {DataDog}, {FluxCD}, {Helm}
+% enable mathematical syntax for some symbols like \varnothing
+\usepackage{amssymb}
+
+% bubble diagram configuration
+\usepackage{smartdiagram}
+\smartdiagramset{
+	% default font size is \large, so adjust to harmonize with sidebar layout
+	bubble center node font = \footnotesize,
+	bubble node font = \footnotesize,
+	% default: 4cm/2.5cm; make minimum diameter relative to sidebar size
+	bubble center node size = 0.4\sidebartextwidth,
+	bubble node size = 0.25\sidebartextwidth,
+	distance center/other bubbles = 1.5em,
+	% set center bubble color
+	bubble center node color = maincolor!70,
+	% define the list of colors usable in the diagram
+	set color list = {maincolor!10, maincolor!40,
+	maincolor!20, maincolor!60, maincolor!35},
+	% sets the opacity at which the bubbles are shown
+	bubble fill opacity = 0.8,
 }
 
-\makeprofile
-%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% END PROFILE SIDEBAR %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%-------------------------------------------------------------------------------
+%                            PERSONAL INFORMATION
+%-------------------------------------------------------------------------------
+%% mandatory information
+% your name
+\cvname{John Stilia}
+% job title/career
+\cvjobtitle{Dev, DevOps, DevSecOps\\[0.2em] Engineer}
+
+%% optional information
+% profile picture
+% \cvprofilepic{pics/profile.png}
+
+% NOTE: ordering in sidebar will mimic the following order
+% date of birth
+% \cvbirthday{\today}
+% short address/location, use \newline if more than 1 line is required
+\cvaddress{Richmond, London}
+% phone number
+\cvphone{+44 7572785067}
+% personal website
+\cvsite{https://indraft.blog}
+% email address
+\cvmail{stilia.johny@gmail.com}
+% pgp key
+% \cvkey{4096R/FF00FF00}{0xAABBCCDDFF00FF00}
+% any other custom entry
+% \cvcustomdata{\faFlag}{Chinese}
+
+%-------------------------------------------------------------------------------
+%                              SIDEBAR 1st PAGE
+%-------------------------------------------------------------------------------
+% add more profile sections to sidebar on first page
+\addtofrontsidebar{
+	% include gosquare national flags from https://github.com/gosquared/flags;
+	% naming according to ISO 3166-1 alpha-2 country codes
+	\graphicspath{{pics/flags/}}
+
+	% social network accounts incl. proper hyperlinks
+	\profilesection{Social Network}
+		\begin{icontable}{1.5em}{1em}
+			\social{\faLinkedin}
+				{https://www.linkedin.com/in/johnstilia/}
+				{johnstilia}
+			\social{\faMedium}
+				{https://stilia-johny.medium.com/}
+				{stilia johny}
+			\social{\faGithub}
+				{https://github.com/stiliajohny}
+				{stiliajohny}
+
+		\end{icontable}
+
+	% \profilesection{Languages}
+	% 	\pointskill{\flag{CN.png}}{Chinese}{5}
+	% 	\pointskill{\flag{DE.png}}{German}{3}
+	% \pointskill{\flag{GB.png}}{English}{3}
+	% \pointskill{\flag{FR.png}}{French}{3}
+
+	% \profilesection{Hard Skills}
+	% 	\skill{\faBalanceScale}{Sleeping almost all day}
+	% 	\skill{\faSitemap}{Eating a lot of bamboo sprouts}
+	% 	\skill{\faGraduationCap}{Relaxing rest of the day}
+
+\profilesection{Engineering Skills}
+\pointskill{\faCode}{Programming Languages}
+	\skill[1.2em]{\faSkillIcon}{Python}
+	\skill[1.2em]{\faSkillIcon}{C++}
+	\skill[1.2em]{\faSkillIcon}{JS}
+	\skill[1.2em]{\faSkillIcon}{Bash}
+
+\pointskill{\faCloud}{Cloud and Infrastructure}
+	\skill[1.2em]{\faSkillIcon}{AWS}
+	\skill[1.2em]{\faSkillIcon}{Serverless}
+	\skill[1.2em]{\faSkillIcon}{Terraform/Terraspace}
+	\skill[1.2em]{\faSkillIcon}{Ansible}
+	\skill[1.2em]{\faSkillIcon}{Docker/Kubernetes}
+	\skill[1.2em]{\faSkillIcon}{Vagrant}
+ 	\skill[1.2em]{\faSkillIcon}{Helm}
+
+\pointskill{\faFile}{Version Control and CI/CD}
+	\skill[1.2em]{\faSkillIcon}{FluxCD}
+	\skill[1.2em]{\faSkillIcon}{Concourse}
+	\skill[1.2em]{\faSkillIcon}{Github / Actions}
+	\skill[1.2em]{\faSkillIcon}{GitLab / CI}
+
+\pointskill{\faLock}{DevOps and Security}
+	\skill[1.2em]{\faSkillIcon}{AWS Well-Architected}
+	\skill[1.2em]{\faSkillIcon}{Snyk}
+	\skill[1.2em]{\faSkillIcon}{Trivy}
+	\skill[1.2em]{\faSkillIcon}{Checkov}
+	\skill[1.2em]{\faSkillIcon}{Bridgecrew}
+
+\pointskill{\faGlasses}{Monitoring and Observability}
+	\skill[1.2em]{\faSkillIcon}{Grafana}
+	\skill[1.2em]{\faSkillIcon}{Prometheus}
+	\skill[1.2em]{\faSkillIcon}{Alert Manager}
+	\skill[1.2em]{\faSkillIcon}{Loki}
+	\skill[1.2em]{\faSkillIcon}{DataDog}
+
+}
 
 
-\section{experience}
-\begin{twenty}
-  \twentyitem
-  {06/2023 - Present}
-  {Senior DevOps Engineer}
-  {Century Tech}
-  {
-    Streamlined Gitlab CICD.\\
+%-------------------------------------------------------------------------------
+%                              SIDEBAR 2nd PAGE
+%-------------------------------------------------------------------------------
+\addtobacksidebar{
+	\profilesection{About Me}
+	\aboutme{
+		The giant panda is a terrestrial animal and primarily spends its life
+		roaming and feeding in the bamboo forests of the Qinling Mountains and in
+		the hilly province of Sichuan.
+	}
+
+	\profilesection{Diagrams}
+	\begin{sidebarminipage}
+		\chartlabel{Bubble}
+		\chartlabel{Diagrams}
+		\chartlabel{with}
+		\chartlabel{proper}
+		\chartlabel{overflow}
+		\chartlabel{protection}
+		\chartlabel{for}
+		\chartlabel{labels}
+	\end{sidebarminipage}
+
+	\begin{figure}\centering
+		\smartdiagram[bubble diagram]{
+			\textcolor{white}{\textbf{Being a}} \\
+			\textcolor{white}{\textbf{Panda}}, % center bubble
+			\textcolor{black!90}{Eating},
+			\textcolor{black!90}{Sleeping},
+			\textcolor{black!90}{Rolling},
+			\textcolor{black!90}{Playing},
+			\textcolor{black!90}{Chilling}
+		}
+	\end{figure}
+
+	\chartlabel{Wheel Chart}
+
+	\wheelchart{3.7em}{2em}{%
+	20/3em/maincolor!50/Chill,
+	15/3em/maincolor!15/Play,
+	30/4em/maincolor!40/Sleep,
+	20/3em/maincolor!20/Eat
+	}
+
+	\profilesection{Barskills}
+	\barskill{\faSkyatlas}{Wearing asian rice hats}{60}
+	\barskill{\faImage}{Playing Chess}{30}
+	\barskill{\faMusic}{Playing the bamboo flute}{50}
+
+	\profilesection{Memberships}
+	\begin{memberships}
+		\membership[4em]{pics/logo.png}{PandaScience.net}
+		\membership[4em]{pics/logo.png}{Some longer text spanning over more than
+			only one line}
+	\end{memberships}
+}
+
+
+%-------------------------------------------------------------------------------
+%                         TABLE ENTRIES RIGHT COLUMN
+%-------------------------------------------------------------------------------
+\begin{document}
+
+\makefrontsidebar
+
+\cvsection{Professional Software Portfolio}
+\begin{cvtable}[2]
+	\cvitem{}{Pasteportal.info}{AWS, Lambda, Python, JS}{A better pastebin for Engineers, share code with ease. }
+	\cvitem{}{LazyLogs VSCode Extension}{JS}{Easy print() and console.log() with one key combo}
+	\cvitem{}{yoloCommit VSCode Extension}{JS}{Quick commit when you need to push fast}
+	\cvitem{}{SoundWaves iOS app}{React native ( JS )}{Relaxing Sounds for focus or sleep.}
+
+\end{cvtable}
+
+
+\cvsection{Working Experience}
+% \cvsubsection{Postgraduate Training}
+\begin{cvtable}[1.5]
+	\cvitem{6/2023 - Present}{Senior DevOps Engineer}{Century Tech}
+		{
+    Streamlined Gitlab CI/CD,SAST,SCA.\\
     Manage AMIs with Packer, Puppet, Ansible\\
     Infrastructure migration to AWS Serverless and EKS\\
-    Enhancing Observability with Prometheus, Grafana, Loki\\
+    Enhancing Observantly with Prometheus, Grafana, Loki\\
     Migrated K8S deployments to helm and FluxCD\\
-    Implemented Infrastructure as Code (IaC) with terraspaspace\\
-    Improving Container Security with Aquasec Trivi\\
-  }
-  \twentyitem
-  {06/2022 - 06/2023}
-  {DevSecOps Lead Engineer/Deputy Head of DevOps}
-  {ITV}
-  {Building DevOps Team(recruitment, onboarding, mentoring).\\
+    Implemented Infrastructure as Code (IaC) with terraspace\\
+    Improving Container Security with Aquasec Trivy\\
+        }
+
+	\cvitem{06/2022 - 06/2023}{DevSecOps Lead Engineer/Deputy Head of DevOps}{ITV/PlanetV}
+		{
+    Building DevOps Team(recruitment, on-boarding, mentoring).\\
     Threat Modelling and Security Architecture.\\
     Infrastructure cost optimasation\\
-    Manage/enhance CICD with Github Actions.\\
+    Manage/enhance CI/CD with GitHub Actions.\\
     Developing Disaster Recovery Architecture.\\
     AWS Well Architecture Framework Delivery\\
-    Deliver Audit and Cyber Security\\
-  }
-  \twentyitem
-  {09/2021-06/2022}
-  {Senior DevSecOps Engineer}
-  {Sky}
-  {Architech and build AWS infrastructure with Terraform\\
-    Implementing AWS Well-Architected Framework\\
+    Compliance Audit and Cyber Security\\
+        }
+
+	\cvitem{09/2021-06/2022}{Senior DevSecOps Engineer}{Sky Media}
+		{
+    Architect and build AWS infrastructure with Terraform\\
+    Implementing AWS Well-Architect Framework\\
     Implementing Security Best Practices\\
-    Develop CICD with Github Actions\\
+    Develop CI/CD with GitHub Actions\\
     Security Incident Response\\
     Scrum Master on Team Projects.\\
     Internal Security Training.\\
-    Develop Observability and Security tools.
+    Develop Observantly and Security tools.
+        }
 
-  }
-  \twentyitem
-  {06/2020-09/2021}
-  {DevSecOps Engineer}
-  {Sky}
-  {Enhance AWS infrastructure.\\
+	\cvitem{06/2020-09/2021}{DevSecOps Engineer}{Sky Media}
+		{
+    Enhance AWS infrastructure.\\
     Developing internal software to accommodate custom security needs.\\
-    Developing and maintaining internal tools to improve the SecuritySecurity of the platform.\\
+    Developing and maintaining internal tools to improve the Security of the platform.\\
     Linux Patching and Vulnerability Management.\\
     Linux Provisioning with Ansible
-    Support the team's recruitment and onboarding process.
+    Support the team's recruitment and on-boarding process.
+        }
+
+	\cvitem{2/2019-06/2020}{DevSecOps Engineer}{F-Secure}
+		{
   }
-  \twentyitem
-  {02/2019-06/2020}
-  {DevOps Engineer}
-  {F-Secure}
-  {AWS deployments with terraform.\\
-    Managing the Infra with Puppet, Ansible and Bolt.\\
-    Vulnerability management with Nessus/Tenable.\\
-    Deploy containers (build custom or reuse public).\\
-    24/7 On-Call Rota for Infrastructure Incidents.
+
+  	\cvitem{09/2018-02/2019}{Support Engineer}{F-Secure}
+		{
   }
-  \twentyitem
-  {09/2018-02/2019}
-  {Support Engineer}
-  {F-Secure}
-  {Security Log Collection.\\
-    Vulnerability management with Nessus/Tenable.\\
-    Deploy containerised infrastructure.\\
-    CI/CD with Jenkins and Gitlab
-  }
-\end{twenty}
 
 
+\end{cvtable}
+
+
+% \cvsubsection{Study}
+% \begin{cvtable}[1.5]
+% 	\cvitem{2006 -- 2008}{Master Studies Panda Science}{Panda Academy}
+% 		{Focus: Advanced rice hat studies and nouveau rain-reflecting cover
+% 		materials.}
+% 	\cvitem{}{Master Theses ($\varnothing\, 1,0$)}{Asian Rice Hat Institute}
+% 		{Impact of solar radiation onto rice hat cover materials with special
+% 		attention to water resistance.}
+% 	\cvitem{2003 -- 2006}{Bachelor Studies PandaScience}{Panda Academy}
+% 		{Focus: Bamboo morphology and its usage in different craftmanships.}
+% 	\cvitem{}{Bachelor Theses ($\varnothing\, 1,0$)}{Bamboo Institute}
+% 		{The bambo flute: An underestimated instrument in orchestras?}
+% \end{cvtable}
+
+% \cvsection{Publications}
+% \begin{cvtable}
+% 	\cvpubitem{Cooking: 100 recipes for lazy Pandas}{Me and My Panda Friends}
+% 		{Panda's Culinary World}{2010}
+% 	\cvpubitem{Pandastasia}{Still Me}{Bamboo Books Assoc.}{2005}
+% \end{cvtable}
+
+
+% \cvsection{Awards}
+% \begin{cvtable}
+% 	\cvitem{2010 -- now}{Panda of the Year}{Panda World Forum}{}
+% 	\cvitem{2005 -- now}{Face of World Wide Fund for Nature}{WWF}{}
+% 	\cvitem{2000}{Winner of Bamboo Sprouts Eating Contest}{Bamboo Society}{}
+% \end{cvtable}
+
+
+\cvsection{Extra-Curricular Activities}
+\begin{cvtable}
+	\cvitemshort{Racing}{Motorbike Racing. Track only}
+	\cvitemshort{Coding}{Usually late nights/early mornings coding.}
+	\cvitemshort{Electronics}{Developing IoT from the ground Up}
+\end{cvtable}
+
+
+% \newpage
+% \makebacksidebar
+% % \newgeometry{
+% % 	top=\topbottommargin,
+% % 	bottom=\topbottommargin,
+% % 	right=\leftrightmargin,
+% % 	left=\leftrightmargin
+% % }
+
+% \cvsection{section}
+% \cvsubsection{Subsection}
+% \begin{cvtable}
+% 	\cvitem{<dates>}{<cv-item title>}{<location>}{<optional: description>}
+% \end{cvtable}
+
+% \cvsection{cvitem}
+% \cvsubsection{Multi-line with longer description}
+% \begin{cvtable}
+% 	\cvitem{date}{Description}{location}{Some longer and more detailed
+% 		description, that takes two lines of space instead of only one.}
+% 	\cvitem{date}{Description}{location}{Some longer and more detailed
+% 		description, that takes two lines of space instead of only one.}
+% 	\cvitem{date}{Description}{location}{Some longer and more detailed
+% 		description, that takes two lines of space instead of only one.}
+% \end{cvtable}
+
+% \cvsubsection{One-line without description}
+% \begin{cvtable}
+% 	\cvitem{Award}{One-line description}{Sponsor}{}
+% 	\cvitem{Award}{One-line description}{Sponsor}{}
+% 	\cvitem{Award}{One-line description}{Sponsor}{}
+% \end{cvtable}
+
+% \cvsection{cvitemshort}
+% \cvsubsection{One-line}
+% \begin{cvtable}
+% 	\cvitemshort{Key}{Some further description}
+% 	\cvitemshort{Key}{Some further description}
+% 	\cvitemshort{Key}{Some further description}
+% \end{cvtable}
+
+% \cvsubsection{Multi-line with longer description}
+% \begin{cvtable}
+% 	\cvitemshort{Key}{Some further description. Can fill even more than
+% 		only one single line while still keeping the correct indendation level.}
+% 	\cvitemshort{Key}{Some further description. Can fill even more than
+% 		only one single line while still keeping the correct indendation level.}
+% 	\cvitemshort{Key}{Some further description. Can fill even more than
+% 		only one single line while still keeping the correct indendation level.}
+% \end{cvtable}
+
+% \cvsection{cvpubitem}
+% \begin{cvtable}
+% 	\cvpubitem{Publication title}{Authors}{Journal}{Year}
+% 	\cvpubitem{Publication title}{Authors}{Journal}{Year}
+% 	\cvpubitem{Publication title that is spanning over multiple lines and still
+% 		does not look too bad}{Authors}{Journal}{Year}
+% \end{cvtable}
+
+\cvsignature
 
 \end{document}
