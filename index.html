@@ -5,12 +5,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self';">
   <title>My CV</title>
 </head>
 
 <body>
-{{/*  show the pdf   */}}
-  <embed src="https://raw.githubusercontent.com/stiliajohny/latex-my-cv/gh-pages/Twenty-Seconds_cv.pdf" type="application/pdf" width="100%" height="100%">
+  <iframe
+  src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://raw.githubusercontent.com/stiliajohny/latex-my-cv/gh-pages/Twenty-Seconds_cv.pdf#toolbar=0&scrollbar=0"
+  frameBorder="0"
+  scrolling="auto"
+  height="100%"
+  width="100%"
+></iframe>
 </body>
+
+
 
 </html>
