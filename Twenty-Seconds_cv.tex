@@ -1,0 +1,157 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Twenty Seconds Curriculum Vitae in LaTex
+% ****************************************
+%
+% License: MIT
+%
+% For further information please visit:
+% https://github.com/spagnuolocarmine/TwentySecondsCurriculumVitae-LaTex
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[]{twentysecondcv}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%
+%% PROFILE SIDE BAR %%
+%%%%%%%%%%%%%%%%%%%%%%
+% personal info
+% \profilepic{alice.jpeg}          % path of profile pic
+\cvname{John Stilia}                   % your name
+\cvjobtitle{DevSecOps Lead Engineer}          % your actual job position
+% \cvdate{26 November 1865}        % date of birth
+\cvaddress{London, United Kingdom}       % address
+\cvnumberphone{+44 07572785067 }   % telephone number
+\cvmail{john.stilia@iusearchbtw.blog}    %e-mail
+\cvsite{http://iusearchbtw.blog} % personal site
+
+\aboutme{
+I am a diverse DevSecOps Lead Engineer. I have a strong background in DevOps, and Security and a partivular interest on the Software lifecycle. I have a passion for learning new technologies and sharing my knowledge with others. I am a strong team player and I am always looking for new challenges.
+
+} % About me section
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% Skill bar section, each skill must have a value between 0 an 6 (float) %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \skills{{pursuer of rabbits/5.5},{good manners/4},{outgoing/4.3},{polite/4},{Java/0.01}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%Skill text section, each skill must have a value between 0 an 6%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\skillstext{{aws},{serverless},{python},{terraform},{ansible},{docker},{kubernetes},{git},{linux},{github actions}, {C++}, {cross-funtional teams},{mentoring}, {management}, {communication}, {problem solving}, {teamwork}, {leadership}, {agile}, {scrum}, {kanban}, {devops}, {security}, {software lifecycle}, {aws well-architected}, {devops}, {devsecops}, {snyk}, {aquasec}, {trivy}, {sca}, {checkov}, {bridgecrew}, {bash}, {on-call}, {Pager Duty}, {Agile}, {Jira}, {Confluence}, {Project Management}, {Scrum}, {Technical Writing}, {Internal Training}}
+
+\makeprofile
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% END PROFILE SIDE BAR %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%
+%%%%%% BODY %%%%%%
+%%%%%%%%%%%%%%%%%%
+% Simple Section
+\section{interests}
+I am interested in photography, cooking and electronics designing. I am also a big fun of Arch linux. Occasionaly I sit down and write some code in Python or C++. Check my blog for more details...
+
+
+\section{experience}
+\begin{twenty}
+  \twentyitem
+    {06/2022 - Present}
+    {DevSecOps Lead Engineer}
+    {ITV}
+    {LIST OF ACHIVEMENTS}
+  \twentyitem
+    {09/2021-06/2022}
+    { Senior DevSecOps Engineer}
+    {Sky}
+    {LIST OF ACHIVEMENTS}
+  \twentyitem
+    {06/2020-09/2021}
+    {DevSecOps Engineer}
+    {Sky}
+    {LIST OF ACHIVEMENTS}
+  \twentyitem
+    {02/2019-06/2020}
+    {DevOps Engineer}
+    {F-Secure}
+    {LIST OF ACHIVEMENTS}
+  \twentyitem
+    {09/2018-02/2019}
+    {Support Engineer}
+    {F-Secure}
+    {LIST OF ACHIVEMENTS}
+  \twentyitem
+    {10/2017-09/2018}
+    {Support Engineer}
+    {Shipleys}
+    {LIST OF ACHIVEMENTS}
+  \twentyitem
+    {Past-10/2017}
+    {Retail Managemet/Hospitality}
+    {Various}
+
+
+\end{twenty}
+
+\section{education}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%% TWENTY LIST ITEMS %%%%%%%%%%%%%%%%%%%%%%%%%%
+%%    Four arguments: date; title; where; description %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{twenty}
+  \twentyitem
+    {since 2010}
+    {BSc {\normalfont in Computer Science}}
+    {National Technical University of Athens }
+    {\emph{Computer networks and security}}
+  \twentyitem
+    {since 2012}
+    {NCFE L2 {\normalfont in Spectators Event}}
+    {College of East London}
+    {\emph{Crowd Management and Spectators Safety}}
+
+\end{twenty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%TWENTY LIST SHORTITEMS %%%%%%%%%%%%%
+%%% Two arguments: date; title/description %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Projects/Achivements}
+\begin{twentyshort}
+  \twentyitemshort
+    {}
+    {Sky - Internal Security Training}
+  \twentyitemshort
+    {}
+    {Sky - Secrets scanning}
+  \twentyitemshort
+    {}
+    {Sky - Centralised Security Dashboard}
+  \twentyitemshort
+    {}
+    {Sky - Secure AMI implementation}
+  \twentyitemshort
+    {}
+    {Sky - Ansible Implementation}
+  \twentyitemshort
+    {}
+    {Sky - AWS Well-Architected Framework}
+  \twentyitemshort
+    {}
+    {Sky - CICD Implementation}
+  \twentyitemshort
+    {}
+    {F-Secure - Quality Assurance Automation}
+  \twentyitemshort
+    {}
+    {F-Secure- Nessus Reporting and Security Implementation}
+\end{twentyshort}
+
+
+\section{other information}
+
+
+%%%%%%%%%%%%%%%%%%%%
+%%%%% ENDBODY %%%%%%
+%%%%%%%%%%%%%%%%%%%%
+\end{document}
