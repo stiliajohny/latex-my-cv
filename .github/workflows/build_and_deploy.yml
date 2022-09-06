@@ -17,7 +17,7 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: Twenty-Seconds_cv.tex
-          post_compile: "mkdir build && mv Twenty-Seconds_cv.pdf build && mv index.html build"
+          post_compile: "mkdir build && mv Twenty-Seconds_cv.pdf build"
 
       - name: 🚀 Deploy
         uses: JamesIves/github-pages-deploy-action@v4.3.3
