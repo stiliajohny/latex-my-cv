@@ -1,14 +1,3 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% Twenty Seconds Curriculum Vitae in LaTex
-% ****************************************
-%
-% License: MIT
-%
-% For further information please visit:
-% https://github.com/spagnuolocarmine/TwentySecondsCurriculumVitae-LaTex
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[]{twentysecondcv}
 \begin{document}
 
@@ -25,20 +14,18 @@
 \cvmail{john.stilia@iusearchbtw.blog}    %e-mail
 \cvsite{http://iusearchbtw.blog} % personal site
 
+\vspace{5cm}
+
 \aboutme{
 I am a diverse DevSecOps Lead Engineer. I have a strong background in DevOps, and Security and a partivular interest on the Software lifecycle. I have a passion for learning new technologies and sharing my knowledge with others. I am a strong team player and I am always looking for new challenges.
-
 } % About me section
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%% Skill bar section, each skill must have a value between 0 an 6 (float) %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \skills{{pursuer of rabbits/5.5},{good manners/4},{outgoing/4.3},{polite/4},{Java/0.01}}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%Skill text section, each skill must have a value between 0 an 6%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\skillstext{{aws},{serverless},{python},{terraform},{ansible},{docker},{kubernetes},{git},{linux},{github actions}, {C++}, {cross-funtional teams},{mentoring}, {management}, {communication}, {problem solving}, {teamwork}, {leadership}, {agile}, {scrum}, {kanban}, {devops}, {security}, {software lifecycle}, {aws well-architected}, {devops}, {devsecops}, {snyk}, {aquasec}, {trivy}, {sca}, {checkov}, {bridgecrew}, {bash}, {on-call}, {Pager Duty}, {Agile}, {Jira}, {Confluence}, {Project Management}, {Scrum}, {Technical Writing}, {Internal Training}}
+\skillstext{{AWS},{Serverless},{Python},{Terraform},{Ansible},{Docker},{Kubernetes},{Git},{Linux},{Github Actions}, {C++}, {Cross-Funtional Teams},{Mentoring}, {Management}, {Communication}, {Problem Solving}, {Teamwork}, {Leadership}, {Agile}, {Scrum}, {Kanban}, {DevOps}, {Security}, {Software Lifecycle}, {AWS Well-Architected}, {Devops}, {DevSecOps}, {Snyk}, {Aquasec}, {Trivy}, {SCA}, {Checkov}, {Bridgecrew}, {Bash}, {On-Call}, {Pager Duty}, {Agile}, {Jira}, {Confluence}, {Project Management}, {Scrum}, {Technical Writing}, {Internal Training}}
 
 \makeprofile
 %%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -49,8 +36,10 @@ I am a diverse DevSecOps Lead Engineer. I have a strong background in DevOps, an
 %%%%%% BODY %%%%%%
 %%%%%%%%%%%%%%%%%%
 % Simple Section
-\section{interests}
-I am interested in photography, cooking and electronics designing. I am also a big fun of Arch linux. Occasionaly I sit down and write some code in Python or C++. Check my blog for more details...
+% \section{interests}
+% I am interested in photography, cooking and electronics designing. I am also a big fun of Arch linux. Occasionaly I sit down and write some code in Python or C++. Check my blog for more details...
+
+
 
 
 \section{experience}
@@ -59,36 +48,42 @@ I am interested in photography, cooking and electronics designing. I am also a b
     {06/2022 - Present}
     {DevSecOps Lead Engineer}
     {ITV}
-    {LIST OF ACHIVEMENTS}
+    {Building a team from the ground up(recruitment,ways of working, processes)\\
+    Developing processes and procedurs to comply with Audit and Security requirements.\\
+    Working with stakeholders to define and implement a DevSecOps strategy.    }
   \twentyitem
     {09/2021-06/2022}
-    { Senior DevSecOps Engineer}
+    {Senior DevSecOps Engineer}
     {Sky}
-    {LIST OF ACHIVEMENTS}
+    {Security Incident Response (24/7 on call rota)\\
+    Scrum Master on Team Projects\\
+    Responsible for Internal Security Training    }
   \twentyitem
     {06/2020-09/2021}
     {DevSecOps Engineer}
     {Sky}
-    {LIST OF ACHIVEMENTS}
+    {    Imrpve the AWS infrastructure\\
+    Developing internal software to accomodate custom security needs.\\
+    Developing and maintaining internal tools to improve the security of the platform.\\
+    Support on the team's recruitment and onboarding process.
+    }
   \twentyitem
     {02/2019-06/2020}
     {DevOps Engineer}
     {F-Secure}
-    {LIST OF ACHIVEMENTS}
+    {AWS deployments with terraform\\
+    Managing the Infra with Puppet, Ansible and Bolt\\
+    Vulnerability management with Nessus/Tennable\\
+    Deploy containers ( build custom or reuse public )\\
+    24/7 On-Call Rota for Infrastructure Incidents}
   \twentyitem
     {09/2018-02/2019}
     {Support Engineer}
     {F-Secure}
-    {LIST OF ACHIVEMENTS}
-  \twentyitem
-    {10/2017-09/2018}
-    {Support Engineer}
-    {Shipleys}
-    {LIST OF ACHIVEMENTS}
-  \twentyitem
-    {Past-10/2017}
-    {Retail Managemet/Hospitality}
-    {Various}
+    {Security Log Collection\\
+    Vulnerability management with Nessus/Tennable\\
+    Deploy containerised infrastructure\\
+    CI/CD with Jenkins and Gitlab}
 
 
 \end{twenty}
@@ -119,36 +114,42 @@ I am interested in photography, cooking and electronics designing. I am also a b
 \section{Projects/Achivements}
 \begin{twentyshort}
   \twentyitemshort
-    {}
-    {Sky - Internal Security Training}
+    {ITV}
+    {Support the creation of Cross-Functional Teams}
   \twentyitemshort
-    {}
-    {Sky - Secrets scanning}
+    {ITV}
+    {Enhance PlanetV recruitment.}
   \twentyitemshort
-    {}
-    {Sky - Centralised Security Dashboard}
+    {SKY}
+    {Internal Security Training}
   \twentyitemshort
-    {}
-    {Sky - Secure AMI implementation}
+    {SKY}
+    {Secrets scanning}
   \twentyitemshort
-    {}
-    {Sky - Ansible Implementation}
+    {SKY}
+    {Centralised Security Dashboard}
   \twentyitemshort
-    {}
-    {Sky - AWS Well-Architected Framework}
+    {SKY}
+    {Secure AMI implementation}
   \twentyitemshort
-    {}
-    {Sky - CICD Implementation}
+    {SKY}
+    {Ansible Implementation}
   \twentyitemshort
-    {}
-    {F-Secure - Quality Assurance Automation}
+    {SKY}
+    {AWS Well-Architected Framework}
   \twentyitemshort
-    {}
-    {F-Secure- Nessus Reporting and Security Implementation}
+    {SKY}
+    {CICD Implementation}
+  \twentyitemshort
+    {F-Secure}
+    {Quality Assurance Automation}
+  \twentyitemshort
+    {F-Secure}
+    {Nessus Reporting and Security Implementation}
 \end{twentyshort}
 
 
-\section{other information}
+% \section{other information}
 
 
 %%%%%%%%%%%%%%%%%%%%

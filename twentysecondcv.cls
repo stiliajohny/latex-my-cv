@@ -1,14 +1,3 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% Twenty Seconds Curriculum Vitae in LaTex
-% ****************************************
-%
-% License: MIT
-%
-% For further information please visit:
-% https://github.com/spagnuolocarmine/TwentySecondsCurriculumVitae-LaTex
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%
 % CLASS %
@@ -219,12 +208,14 @@
       \end{tabular}
 
       % about me text
+      \vspace*{1cm}
       \profilesection{About me}{3.2cm}
       \givenaboutme
 
       % skills with scale
+      \vspace*{1cm}
       \profilesection{Skill}{5cm}
-      \givenskill
+      % \givenskill
       \giventextskill
       \noindent
       \scriptsize
